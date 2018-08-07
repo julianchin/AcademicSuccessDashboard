@@ -27,17 +27,6 @@ def home():
 def advisor():
     return render_template('advisor.html', advisors=advisors)
 
-@app.route("/wireless")
-def wireless():
-    return render_template('advisor.html', advisors=advisors)
-
-@app.route("/compass")
-def compass():
-    return render_template('advisor.html', advisors=advisors)
-
-@app.route("/mooddle")
-def moddle():
-    return render_template('advisor.html', advisors=advisors)
 
 if __name__ == '__main__':
     app.run(debug=True)
