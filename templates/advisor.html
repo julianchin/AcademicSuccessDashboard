@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-9">
+            <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Enter keywords or click the dropdown list" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                  <div class="form-group">
+                                    <label for="filter">Degree Level</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>PhD</option>
+                                        <option value="1">Masters</option>
+                                        <option value="2">Undergraduates</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="contain">Department</label>
+                                    <select class="form-control">
+                                        <option value="0" selected>Computer Science</option>
+                                        <option value="1">Information Science</option>
+                                        <option value="2">Electrical and Computer Engineering</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="contain">Contains the words</label>
+                                    <input class="form-control" type="text" />
+                                  </div>
+                                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true">Search</span></button>
+                                </form>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true">Search</span></button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10">
+            <ul class="advisor-list">
+              {% for advisor in advisors %}
+                <li class="advisor">
+                    <img alt="advisor image" src="/static/profile_pics/default.jpg" />
+                    <div>
+                      <a href="#" class="advisor-name"> {{ advisor.name }} </a>
+                      <p class="advisor-department">{{ advisor.Department }}</p>
+                      <p class="advisor-grade">{{ advisor.grade }}</p>
+                      <p class="advisor-contact">{{ advisor.Email }}</p>
+                    </div>
+                    <p class="advisor-philosophy">{{ advisor.Philosophy }}</p>                  
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </li>
+              {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock content %}
