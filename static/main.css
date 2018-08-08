@@ -43,52 +43,60 @@ ul {
 }
 
 .wireless {
-  background: #ce3727; 
-  height: 400px;
+  background: red; 
+  height: 200px;
   float:left;
   width: 30%;
   display: flex;
   margin-right: 5%;
+  font-size: 1.3em;
+  color:black;
   
 }
 
-.wireless:hover {
+/*.wireless:hover {
   background: #F2EBD9;
-}
+}*/
 
 .compass {
-  background: #f7dc2c;
-  height: 400px;
+  background: yellow;
+  height: 200px;
   width: 30%;
   display: flex;
+  font-size: 1.3em;
+  color:black;
 }
 
-.compass:hover {
+/*.compass:hover {
   background: #F2EBD9;
-}
+}*/
 
 .moodle {
-  background: #baed68;
+  background: green;
   float:right;
-  height: 400px;
+  height: 200px;
   width: 30%;
   margin-left: 5%;
   display: flex; 
+  font-size: 1.3em;
+  color:black;
 }
 
-.moodle:hover {
+/*.moodle:hover {
   background: #F2EBD9;
-}
+}*/
 
-.credit {
+.degree-audit {
   background: #c1713c;
   height: 200px;
   display: flex;
+  font-size: 1.3em;
+  color:black;
 }
 
-.credit:hover {
+/*.degree-audit:hover {
   background: #F2EBD9;
-}
+}*/
 
 .input-group {
   margin-left: 80px;
@@ -137,15 +145,15 @@ ul {
     }
 }
 
-.advisor-list {
+.advisee-list {
   list-style:  none;
   margin-left: 80px;
-  min-height:  250px;
+  min-height:  150px;
   padding:     10px;
   background:  #F2EBD9;
 }
 
-.advisor {
+.advisee {
   display: flex;
   align-items: center;
   color: #624630;
@@ -154,49 +162,49 @@ ul {
   padding: 15px;
 }
 
-.advisor:hover {
+.advisee:hover {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.advisor:last-child {
+.advisee:last-child {
   border: none;
 }
 
-.advisor img {
+.advisee img {
   border: 1px solid #FFFFFF;
   height: 80px;
   width:  80px;
 }
 
-.advisor div:first-of-type {
+.advisee div:first-of-type {
   flex: 1;
   margin-left:  10px;
   margin-right: 10px;
 }
 
-.advisor-name {
+.advisee-name {
   color: #624630;
   font-weight:     400;
   text-decoration: none;
 }
 
-.advisor-name:hover {
+.advisee-name:hover {
   text-decoration: underline;
 }
 
-.advisor-status {
+.advisee-status {
   color: #624630;
   font-weight:     400;
   text-decoration: none;
 }
 
-.btn-circle.btn-sm {
-  width: 25px;
-  height: 25px;
+.btn-circle .btn-sm {
+  width: 15px;
+  height: 15px;
   padding: 10px 10px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 20px;
+  font-size: 10px;
+  line-height: 1.20;
+  border-radius: 50%;
   float: right;
 }
 
@@ -209,7 +217,14 @@ ul {
 }
 
 .btn-success {
-  margin-right: 13px;
+  margin-right: 55px;
+}
+
+.site-title {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-right : 20px;
+  margin-left: 20px;
 }
 
 footer {

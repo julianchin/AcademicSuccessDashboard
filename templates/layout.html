@@ -13,18 +13,20 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
         {% if title %}
-            <title>Academic status - {{ title }}</title>
+            <title>Academic Success Dashboard - {{ title }}</title>
         {% else %}
-            <title>Academic status</title>
+            <title>Academic Success Dashboard</title>
         {% endif %}
     </head>
     <body>
         <header class="top-header">
           <a href="/">
             <img src="/static/profile_pics/logo.png" height="40px" width="155px" alt="logo_image"></img>
-          </a>    
+          </a>   
+          <div class="site-title">Academic Success Dashboard </div>
           <nav class="top-nav">
-            <a href="/advisor">Advisor</a>
+            
+            <a href="/advisor">Advisor's View</a>
           </nav>
         </header>
         <section class="container">
@@ -35,12 +37,12 @@
         <footer>
             <p class="title">About AcademicSuccessDashboard</p>
             <div class="about-us">
-                <p>AcademicSuccessDashboard is an Internet application that allows you to monitor the status of academic statusthrough a Web browser. AcademicView's mission is to help you save time by providing information about the current state of academic status and giving alert to dangerous part wherever you have access to a browser or email messages.</p>
+                <p>AcademicSuccessDashboard is a web application that allows students and their advisors to monitor the status of students' academic status through a web interface. AcademicSuccessDashboard's mission is to help students and advisors monitor academic success by offering information about the current state of academic status and providing alert of potential failure in academic performance.</p>
             </div>
             <ul>
               <li>
                 <p><i class="fa fa-map-o fa-2x"></i></p>
-                <p>Technology Service</br>University of Illinois at Urbana Champaign, IL</p>
+                <p>Technology Services</br>University of Illinois at Urbana-Champaign</p>
               </li>
               <li>
                 <p><i class="fa fa-envelope-o fa-2x"></i></p>

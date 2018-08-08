@@ -1,20 +1,24 @@
 from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
-advisors = [
+advisees = [
     {
-        'name': 'Corey Schafer',
-        'Department': 'Computer Science',
-        'grade': 'Senior',
-        'Email': 'xxx@illinois.edu',
-        'Philosophy':'Work hard, play harder!'
+        'name': 'Mary Smith',
+        'department': 'Computer Science',
+        'degree_level': 'Senior',
+        'email': 'msmith5@illinois.edu',
+        'wireless_status':'danger',
+        'compass_status':'warning',
+        'moodle_status':'success'
     },
     {
-        'name': 'John Smith',
-        'Department': 'Computer Science',
-        'grade': 'PhD',
-        'Email': 'xxx@illinois',
-        'Philosophy':'Just do it!'
+        'name': 'John Doe',
+        'department': 'Information Sciences',
+        'degree_level': 'PhD',
+        'email': 'jdoe2@illinois',
+        'wireless_status':'success',
+        'compass_status':'warning',
+        'moodle_status':'success'
     }
 ]
 
@@ -25,7 +29,7 @@ def home():
 
 @app.route("/advisor")
 def advisor():
-    return render_template('advisor.html', advisors=advisors)
+    return render_template('advisor.html', advisees=advisees)
 
 
 if __name__ == '__main__':

@@ -13,16 +13,16 @@
                                   <div class="form-group">
                                     <label for="filter">Degree Level</label>
                                     <select class="form-control">
-                                        <option value="0" selected>PhD</option>
-                                        <option value="1">Masters</option>
-                                        <option value="2">Undergraduates</option>
+                                        <option value="0" selected>PhD Students</option>
+                                        <option value="1">Master Students</option>
+                                        <option value="2">Undergraduate Students</option>
                                     </select>
                                   </div>
                                   <div class="form-group">
                                     <label for="contain">Department</label>
                                     <select class="form-control">
                                         <option value="0" selected>Computer Science</option>
-                                        <option value="1">Information Science</option>
+                                        <option value="1">Information Sciences</option>
                                         <option value="2">Electrical and Computer Engineering</option>
                                     </select>
                                   </div>
@@ -41,23 +41,22 @@
           </div>
         </div>
         <div class="col-md-10">
-            <ul class="advisor-list">
-              {% for advisor in advisors %}
-                <li class="advisor">
-                    <img alt="advisor image" src="/static/profile_pics/default.jpg"/>
+            <ul class="advisee-list">
+              {% for advisee in advisees %}
+                <li class="advisee">
+                    <!--<img alt="advisee image" src="/static/profile_pics/default.jpg"/>-->
                     <div class="row">
                       <div class="col-md-6">
-                        <a class="advisor-name" href="/">{{ advisor.name }}</a> 
-                        <span class="advisor-department" style="float:right;">{{advisor.Department}}</span>
-                        <div class="advisor-title-right">
-                          <p class="advisor-degree">{{advisor.grade}} <span class="advisor-contact" style="float:right;">{{advisor.Email}}</span> </p>
+                        <a class="advisee-name" href="/">{{ advisee.name }}</a></br>
+                      {{ advisee.degree_level }}, {{ advisee.department }}</br>
+                        {{advisee.email}}
                         </div>
-                      </div>
+                      
                       <div class="col-md-5">
-                          <p class="advisor-status" style="float:right;">Wireless <span style="margin-left: 20px">Compass <span style="margin-left: 20px">Moodle</span></span></p>
-                          <button type="button" class="btn btn-success btn-circle btn-sm"></button>
-                          <button type="button" class="btn btn-warning btn-circle btn-sm"></button>
-                          <button type="button" class="btn btn-danger btn-circle btn-sm"></button>
+                          <p class="advisee-status" style="float:right;">Wireless <button type="button" class="btn btn-{{advisee.wireless_status}} btn-circle btn-sm"></button></br>Compass <button type="button" class="btn btn-{{advisee.compass_status}} btn-circle btn-sm"></button></br>Moodle <button type="button" class="btn btn-{{advisee.moodle_status}} btn-circle btn-sm"></button></p>
+                          
+                         
+                          
                       </div>
                     </div>
                 </li>
