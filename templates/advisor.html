@@ -44,18 +44,21 @@
             <ul class="advisor-list">
               {% for advisor in advisors %}
                 <li class="advisor">
-                    <img alt="advisor image" src="/static/profile_pics/default.jpg" />
-                    <div>
-                      <a href="#" class="advisor-name"> {{ advisor.name }} </a>
-                      <p class="advisor-department">{{ advisor.Department }}</p>
-                      <p class="advisor-grade">{{ advisor.grade }}</p>
-                      <p class="advisor-contact">{{ advisor.Email }}</p>
-                    </div>
-                    <p class="advisor-philosophy">{{ advisor.Philosophy }}</p>                  
-                    <div class="stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <img alt="advisor image" src="/static/profile_pics/default.jpg"/>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <a class="advisor-name" href="/">{{ advisor.name }}</a> 
+                        <span class="advisor-department" style="float:right;">{{advisor.Department}}</span>
+                        <div class="advisor-title-right">
+                          <p class="advisor-degree">{{advisor.grade}} <span class="advisor-contact" style="float:right;">{{advisor.Email}}</span> </p>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                          <p class="advisor-status" style="float:right;">Wireless <span style="margin-left: 20px">Compass <span style="margin-left: 20px">Moodle</span></span></p>
+                          <button type="button" class="btn btn-success btn-circle btn-sm"></button>
+                          <button type="button" class="btn btn-warning btn-circle btn-sm"></button>
+                          <button type="button" class="btn btn-danger btn-circle btn-sm"></button>
+                      </div>
                     </div>
                 </li>
               {% endfor %}

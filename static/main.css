@@ -164,7 +164,7 @@ ul {
 
 .advisor img {
   border: 1px solid #FFFFFF;
-  height: 100px;
+  height: 80px;
   width:  80px;
 }
 
@@ -184,13 +184,32 @@ ul {
   text-decoration: underline;
 }
 
-.advisor-contact {
-  line-height: 20px;
-  padding-right: 20px;
+.advisor-status {
+  color: #624630;
+  font-weight:     400;
+  text-decoration: none;
 }
 
-.stars {
-  padding-top: 10px;
+.btn-circle.btn-sm {
+  width: 25px;
+  height: 25px;
+  padding: 10px 10px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 20px;
+  float: right;
+}
+
+.btn-danger {
+  margin-right: 55px;
+}
+
+.btn-warning {
+  margin-right: 55px;
+}
+
+.btn-success {
+  margin-right: 13px;
 }
 
 footer {
